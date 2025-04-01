@@ -111,22 +111,34 @@ body {
         transform: translateY(0);
     }
 }
-/* Mobile View */
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px; /* Reduced padding for mobile */
-        flex-direction: column; /* Stack navbar items vertically */
-        align-items: flex-start; /* Align to left */
+        display: flex;
+        justify-content: space-between; /* Space between logo and hamburger */
+        align-items: center; /* Align items in a row */
+    }
+
+    /* Logo aligned to the left */
+    .logo {
+        flex: 1; /* Take up available space */
     }
 
     .logo img {
         width: 120px; /* Adjust logo size for mobile */
+        display: block;
     }
 
+    /* Hamburger positioned to the right */
     .hamburger {
-        display: block; /* Show hamburger menu on mobile */
+        display: block; /* Ensure it's visible on mobile */
+        position: relative; /* Normal position within navbar */
+        top: auto;
+        right: auto;
+        cursor: pointer;
     }
 
+    /* Navigation links hidden initially */
     .nav-links {
         display: none; /* Hide nav links initially */
         flex-direction: column;
@@ -1635,7 +1647,7 @@ textarea {
         </div>
     </div>
     <div class="video-container">
-        <video src="video bg-VEED.mp4" autoplay muted loop poster="your-thumbnail.jpg"></video>
+        <video src="video bg.mp4" autoplay muted loop poster="your-thumbnail.jpg"></video>
         <div class="overlay">
             <div class="play-button"></div>
             <h2>We Provide Brilliant Ideas & The Digital Agency</h2>
